@@ -1,0 +1,156 @@
+/* убираем отступы браузера */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* прячем чекбоксы */
+#theme, #menu {
+  display: none;
+}
+
+/* тёмная тема */
+.page {
+  background: #0d0d1f;
+  color: white;
+}
+
+/* светлая тема, если чекбокс нажат */
+#theme:checked ~ .page {
+  background: white;
+  color: black;
+}
+
+/* кнопка */
+.btn {
+  background: orange;
+  color: black;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 2rem;
+}
+
+/* шапка */
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+}
+
+.burger {
+  font-size: 2rem;
+}
+
+/* меню на телефоне скрыто */
+.nav {
+  display: none;
+  width: 100%;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* показываем меню, если нажали бургер */
+#menu:checked ~ .nav {
+  display: flex;
+}
+
+/* главный экран */
+.hero {
+  height: 80vh;
+  padding: 2rem 5%;
+  background: url("images/hero-space.webp");
+  background-size: cover;
+  color: white;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin: 30vh 0 2rem;
+}
+
+/* секции */
+.section {
+  padding: 3rem 5%;
+}
+
+/* сетка: 1 колонка на телефоне */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.card {
+  border: 0.1rem solid gray;
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+/* форма */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 30rem;
+  margin-top: 1rem;
+}
+
+.form input {
+  padding: 0.8rem;
+  border: 0.15rem solid gray;
+}
+
+/* проверка: красная рамка, если поле заполнено неправильно */
+.form input:focus:invalid {
+  border-color: red;
+}
+
+/* подвал */
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem 5%;
+  border-top: 0.1rem solid gray;
+}
+
+.theme-btn {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* компьютер (от 1024px) */
+@media (min-width: 1024px) {
+  .burger {
+    display: none;
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: auto;
+  }
+
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .footer {
+    flex-direction: row;
+  }
+}

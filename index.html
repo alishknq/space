@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cosmos Nearby</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <input type="checkbox" id="theme">
+
+  <div class="page">
+
+    <!-- 1. Шапка -->
+    <header class="header">
+      <h1 class="logo">Cosmos Nearby</h1>
+
+      <input type="checkbox" id="menu">
+      <label for="menu" class="burger">☰</label>
+
+      <nav class="nav">
+        <a href="#playbill">Playbill</a>
+        <a href="#speakers">Speakers</a>
+        <a href="#podcasts">Podcasts</a>
+        <a href="#playbill" class="btn">Buy a Ticket</a>
+      </nav>
+    </header>
+
+    <main>
+
+      <!-- 2. Главный экран -->
+      <section class="hero">
+        <h2>Simply About the Structure of the Universe</h2>
+        <a href="#playbill" class="btn">Event Schedule</a>
+      </section>
+
+      <!-- 3. Сетка лекций -->
+      <section id="playbill" class="section">
+        <h2>Playbill</h2>
+        <div class="grid">
+          <article class="card">
+            <p>5 Nov, 19:00</p>
+            <h3>Black Holes</h3>
+            <p>PhD in Astrophysics</p>
+            <p>Seats available</p>
+          </article>
+          <article class="card">
+            <p>12 Nov, 19:00</p>
+            <h3>Dark Matter</h3>
+            <p>Doctor of Physics</p>
+            <p>Few seats left</p>
+          </article>
+          <article class="card">
+            <p>19 Nov, 18:30</p>
+            <h3>How Stars Are Born</h3>
+            <p>PhD in Astronomy</p>
+            <p>Sold out</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="speakers" class="section">
+        <h2>Speakers</h2>
+        <p>Scientists from universities and observatories.</p>
+      </section>
+
+      <section id="podcasts" class="section">
+        <h2>Podcasts</h2>
+        <p>Recordings of past lectures.</p>
+      </section>
+
+      <!-- 4. Форма -->
+      <section class="section">
+        <h2>Registration</h2>
+        <form class="form">
+          <input type="text" placeholder="Name" required>
+          <input type="email" placeholder="Email" required>
+          <input type="tel" placeholder="Phone">
+          <button class="btn">Register</button>
+        </form>
+      </section>
+
+    </main>
+
+    <!-- 5. Подвал -->
+    <footer class="footer">
+      <a href="https://www.eso.org">ESO Observatory</a>
+      <a href="#">Instagram</a>
+      <a href="#">Telegram</a>
+      <label for="theme" class="theme-btn">Light / Dark</label>
+      <p>© 2026 Cosmos Nearby. All rights reserved.</p>
+    </footer>
+
+  </div>
+</body>
+</html>
